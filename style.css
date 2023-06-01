@@ -16,6 +16,27 @@ svg {
 }
 
 :root {
-	--color-accent-400: ;
-	--color-primary-400: ;
+	--radius-main: 0.7rem 0.3rem 0.7rem 0.3rem;
+	--radius-all: 0.7rem;
+
+
+	--color-font-main: rgb(255, 255, 255);
+
+
+	--color-accent-400: rgb(236, 217, 42);
+
+
+
+	--color-primary-400: rgb(47, 49, 41);
+}
+
+body {
+	background: var(--color-primary-400);
+	color: var(--color-font-main);
+}
+
+button {
+	padding: 1rem;
+	background: var(--color-accent-400);
+	border-radius: var(--radius-main);
 }
