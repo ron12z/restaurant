@@ -14,3 +14,8 @@ img,
 svg {
 	width: 2rem;
 }
+
+:root {
+	--color-accent-400: ;
+	--color-primary-400: ;
+}
