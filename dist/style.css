@@ -16,14 +16,21 @@ svg {
 }
 
 :root {
+	--fw-400: 400;
+	--fw-700: 700;
+	--fw-800: 800;
+	--fw-900: 900;
+
 	--radius-main: 0.7rem 0.3rem 0.7rem 0.3rem;
 	--radius-all: 0.7rem;
 
 
-	--color-font-main: rgb(255, 255, 255);
+	--font-color-main: rgb(255, 255, 255);
+	--font-color-dark: rgb(51, 11, 4);
 
 
 	--color-accent-400: rgb(236, 217, 42);
+	--color-accent-800: rgb(131, 49, 24);
 
 
 
@@ -32,11 +39,21 @@ svg {
 
 body {
 	background: var(--color-primary-400);
-	color: var(--color-font-main);
+	color: var(--font-color-main);
 }
 
 button {
 	padding: 1rem;
 	background: var(--color-accent-400);
 	border-radius: var(--radius-main);
+	font-weight: var(--fw-700);
+}
+
+.menuBtn {
+	background: var(--color-accent-800);
+	color: var(--font-color-main);
+}
+
+.contactBtn {
+	color: var(--font-color-dark)
 }
