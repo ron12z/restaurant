@@ -15,6 +15,8 @@ svg {
 	width: 2rem;
 }
 
+
+
 :root {
 	--fw-400: 400;
 	--fw-700: 700;
@@ -42,6 +44,7 @@ body {
 	color: var(--font-color-main);
 }
 
+/* Buttons */
 button {
 	padding: 1rem;
 	background: var(--color-accent-400);
@@ -56,4 +59,32 @@ button {
 
 .contactBtn {
 	color: var(--font-color-dark)
+}
+
+/* Main Layout */
+#content {
+	min-height: 100vh;
+	min-height: 100dvh;
+	display: flex;
+	flex-direction: column;
+
+	& main { 
+		flex: 1;
+	}
+}
+
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1rem;
+
+	& .logo {
+		display: flex;
+	}
+}
+
+.primary-nav ul {
+	display: flex;
+	gap: 0.5rem;
 }
