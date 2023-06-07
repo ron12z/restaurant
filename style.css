@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:wght@400;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Lilita+One&family=Playfair:opsz,wght@5..1200,400;5..1200,700&family=Roboto+Slab:wght@400;600;700&display=swap");
+
 *,
 *::after,
 *::before {
@@ -10,33 +12,35 @@ ul {
 	list-style-type: none;
 }
 
-img,
 svg {
 	width: 2rem;
 }
 
-
-
 :root {
+	--ff-gentium: "Gentium Book Plus", serif;
+	--ff-basker: "Libre Baskerville", serif;
+	--ff-lilita: "Lilita One", cursive;
+	--ff-playfair: "Playfair", serif;
+	--ff-robotoslab: "Roboto Slab", serif;
+
 	--fw-400: 400;
 	--fw-700: 700;
 	--fw-800: 800;
 	--fw-900: 900;
 
-	--radius-main: 0.7rem 0.3rem 0.7rem 0.3rem;
+	--radius-button: 1rem 0.4rem;
+	--radius-image: 9rem 1rem;
 	--radius-all: 0.7rem;
-
 
 	--font-color-main: rgb(255, 255, 255);
 	--font-color-dark: rgb(92, 18, 6);
-
+	--font-color-header: rgb(83, 9, 9);
 
 	--color-accent-400: rgb(236, 217, 42);
 	--color-accent-800: rgb(201, 53, 9);
+	--color-accent-2: rgb(160, 135, 25);
 
-
-
-	--color-primary-400: rgb(59, 59, 30);
+	--color-primary-400: rgb(68, 68, 53);
 }
 
 body {
@@ -46,9 +50,9 @@ body {
 
 /* Buttons */
 button {
-	padding: 1rem;
+	padding: 1rem 2rem;
 	background: var(--color-accent-400);
-	border-radius: var(--radius-main);
+	border-radius: var(--radius-button);
 	font-weight: var(--fw-700);
 }
 
@@ -58,7 +62,27 @@ button {
 }
 
 .contactBtn {
-	color: var(--font-color-dark)
+	color: var(--font-color-dark);
+}
+
+button,
+.logo,
+.primary-nav li {
+	cursor: pointer;
+}
+
+/* Main Typography */
+body {
+	font-family: var(--ff-gentium);
+	line-height: 1.2;
+
+	& .logo {
+		font-family: var(--ff-lilita);
+	}
+}
+
+.intro-text h2 {
+	line-height: 1;
 }
 
 /* Main Layout */
@@ -68,23 +92,107 @@ button {
 	display: flex;
 	flex-direction: column;
 
-	& main { 
+	& main {
 		flex: 1;
 	}
 }
 
 header {
+	background: var(--color-accent-2);
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 1rem;
+	padding: 1.4rem;
+	font-size: 1.3rem;
+	color: var(--font-color-header);
 
 	& .logo {
+		padding-left: 1rem;
 		display: flex;
+		gap: 0.5rem;
 	}
 }
 
 .primary-nav ul {
+	font-size: 1.5rem;
 	display: flex;
-	gap: 0.5rem;
+	gap: 1rem;
+	margin-right: 3rem;
+	font-weight: var(--fw-700);
+}
+
+main {
+	display: grid;
+	grid-template-columns: 55% 1fr;
+	padding: 1rem;
+	gap: 5rem;
+	margin-inline: auto;
+}
+
+.intro-text {
+	gap: 3rem;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	padding-top: 12rem;
+	padding-inline: 3rem;
+	font-size: 1.7em;
+
+	& p {
+		max-width: 50ch;
+		z-index: 2;
+	}
+}
+
+.intro-buttons {
+	align-self: center;
+}
+.intro-image {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	position: relative;
+
+	& img {
+		width: 30rem;
+		position: relative;
+	}
+	& .main {
+		border-radius: var(--radius-image);
+	}
+}
+
+.intro-image-container {
+	width: fit-content;
+}
+
+.intro-image-container::before {
+	z-index: 1;
+	position: absolute;
+	display: block;
+	content: url("../assets/images/dish-2\ 1.png");
+	bottom: 5rem;
+	left: -10rem;
+	text-shadow: 10rem 10rem 10rem 10rem;
+}
+
+.intro-image-container::after {
+	--_size: 15rem;
+	content: "";
+	height: var(--_size);
+	width: var(--_size);
+	position: absolute;
+	bottom: 9rem;
+	left: -6rem;
+	box-shadow: 0 0 5rem 5rem;
+	opacity: 0.4;
+	border-radius: 50%;
+}
+
+footer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 1rem;
+	background: rgb(53, 53, 53);
 }
