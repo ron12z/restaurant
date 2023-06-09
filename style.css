@@ -121,7 +121,7 @@ header {
 	font-weight: var(--fw-700);
 }
 
-main {
+main.main {
 	display: grid;
 	grid-template-columns: 55% 1fr;
 	padding: 1rem;
@@ -195,4 +195,19 @@ footer {
 	align-items: center;
 	padding: 1rem;
 	background: rgb(53, 53, 53);
+}
+
+/* About */
+main.about {
+	background: yellow;
+}
+
+/* Menu */
+main.menu {
+	background: orange;
+}
+
+/* Contact */
+main.contact {
+	background: plum;
 }
