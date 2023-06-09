@@ -47,7 +47,7 @@ body {
 	background: var(--color-primary-400);
 	color: var(--font-color-main);
 
-	background: url(../assets/images/adrien-olichon-RCAhiGJsUUE-unsplash.jpg);
+	background: url(./assets/images/adrien-olichon-RCAhiGJsUUE-unsplash.jpg);
 	background-size: cover;
 }
 
@@ -179,7 +179,7 @@ main.main {
 	z-index: 1;
 	position: absolute;
 	display: block;
-	content: url("../assets/images/dish-2\ 1.png");
+	content: url("./assets/images/dish-2\ 1.png");
 	bottom: 5rem;
 	left: -10rem;
 }
