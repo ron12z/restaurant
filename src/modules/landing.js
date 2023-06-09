@@ -1,6 +1,6 @@
 import Events from "../modules/events.js";
 
-const loadLanding = () => {
+const load = () => {
 	const contentContainer = document.querySelector("#content");
 
 	contentContainer.innerHTML = `
@@ -51,4 +51,4 @@ const loadLanding = () => {
 	Events.loadHandlers();
 };
 
-export default { loadLanding };
+export default { load };

@@ -199,7 +199,21 @@ footer {
 
 /* About */
 main.about {
-	background: yellow;
+	display: flex;
+	font-size: 2em;
+	flex-direction: column;
+	align-items: center;
+	padding-top: 5rem;
+}
+
+.about .wrapper {
+	width: minmax(5rem, 80ch);
+	padding-inline: 3rem;
+
+	& h2 {
+		text-align: center;
+		margin-bottom: 2rem;
+	}
 }
 
 /* Menu */
@@ -209,5 +223,12 @@ main.menu {
 
 /* Contact */
 main.contact {
-	background: plum;
+	padding: 2rem;
+	font-size: 1.3em;
+}
+
+.contact .contact-details {
+	margin-top: 0.5rem;
+	display: flex;
+	gap: 0.5rem;
 }

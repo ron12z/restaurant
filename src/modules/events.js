@@ -9,27 +9,27 @@ const clickHandlers = (() => {
 	const logo = (e) => {
 		clearMainContent();
 		console.log("logo");
-		Landing.loadLanding();
+		Landing.load();
 	};
 
 	// Goes to about page
 	const about = (e) => {
 		clearMainContent();
-		About.loadAbout();
+		About.load();
 		console.log("About");
 	};
 
 	// Goes to menu page
 	const menu = (e) => {
 		clearMainContent();
-		Menu.loadMenu();
+		Menu.load();
 		console.log("Menu");
 	};
 
 	// Goes to contact page
 	const contact = (e) => {
 		clearMainContent();
-		Contact.loadContact();
+		Contact.load();
 		console.log("Contact");
 	};
 

@@ -1,6 +1,6 @@
-const loadMenu = () => {
+const load = () => {
 	const mainDiv = document.querySelector("main");
 	mainDiv.classList.add("menu");
 };
 
-export default { loadMenu };
+export default { load };
