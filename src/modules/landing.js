@@ -16,6 +16,7 @@ const load = () => {
 				</div>
 				<nav class="primary-nav">
 					<ul>
+						<li id="home" class="active">Home</li>
 						<li id="about">About</li>
 						<li id="menu">Menu</li>
 						<li id="contact">Contact</li>

@@ -34,11 +34,11 @@ svg {
 
 	--font-color-main: rgb(255, 255, 255);
 	--font-color-dark: rgb(92, 18, 6);
-	--font-color-header: rgb(83, 9, 9);
+	--font-color-header: rgb(233, 231, 153);
 
 	--color-accent-400: rgb(236, 217, 42);
 	--color-accent-800: rgb(201, 53, 9);
-	--color-accent-2: rgb(160, 135, 25);
+	--color-accent-2: rgb(160, 135, 25, 0.7);
 
 	--color-primary-400: rgb(68, 68, 53);
 }
@@ -46,6 +46,9 @@ svg {
 body {
 	background: var(--color-primary-400);
 	color: var(--font-color-main);
+
+	background: url(../assets/images/adrien-olichon-RCAhiGJsUUE-unsplash.jpg);
+	background-size: cover;
 }
 
 /* Buttons */
@@ -78,6 +81,7 @@ body {
 
 	& .logo {
 		font-family: var(--ff-lilita);
+		letter-spacing: 0.3rem;
 	}
 }
 
@@ -109,7 +113,11 @@ header {
 	& .logo {
 		padding-left: 1rem;
 		display: flex;
-		gap: 0.5rem;
+		gap: 1rem;
+	}
+
+	& svg {
+		transform: scale(1.25);
 	}
 }
 
@@ -156,6 +164,7 @@ main.main {
 	& img {
 		width: 30rem;
 		position: relative;
+		box-shadow: 0 0 5rem 0.2rem;
 	}
 	& .main {
 		border-radius: var(--radius-image);
@@ -173,7 +182,6 @@ main.main {
 	content: url("../assets/images/dish-2\ 1.png");
 	bottom: 5rem;
 	left: -10rem;
-	text-shadow: 10rem 10rem 10rem 10rem;
 }
 
 .intro-image-container::after {
@@ -195,6 +203,12 @@ footer {
 	align-items: center;
 	padding: 1rem;
 	background: rgb(53, 53, 53);
+}
+
+/* Active page */
+.active {
+	color: var(--color-accent-800);
+	text-shadow: 0px 0px 3px #ffffffd3;
 }
 
 /* About */
@@ -230,5 +244,19 @@ main.contact {
 .contact .contact-details {
 	margin-top: 0.5rem;
 	display: flex;
+	align-items: center;
 	gap: 0.5rem;
+
+	& svg {
+		scale: 0.97;
+	}
+}
+.contact .contact-details a {
+	color: inherit;
+	text-decoration: none;
+}
+
+.contact .contact-details svg,
+.contact .contact-details h4 {
+	cursor: pointer;
 }

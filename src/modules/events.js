@@ -7,44 +7,70 @@ import Contact from "../modules/contact.js";
 const clickHandlers = (() => {
 	// Goes landing page
 	const logo = (e) => {
+		removeActive();
 		clearMainContent();
-		console.log("logo");
 		Landing.load();
+
+		const home = document.querySelector("#home");
+		home.classList = "active";
 	};
 
 	// Goes to about page
 	const about = (e) => {
+		removeActive();
 		clearMainContent();
 		About.load();
-		console.log("About");
+
+		const about = document.querySelector("#about");
+		about.classList = "active";
 	};
 
 	// Goes to menu page
 	const menu = (e) => {
+		removeActive();
 		clearMainContent();
 		Menu.load();
-		console.log("Menu");
+
+		const menu = document.querySelector("#menu");
+		menu.classList = "active";
 	};
 
 	// Goes to contact page
 	const contact = (e) => {
+		removeActive();
 		clearMainContent();
 		Contact.load();
-		console.log("Contact");
+
+		const contact = document.querySelector("#contact");
+		contact.classList = "active";
 	};
 
 	return { logo, about, menu, contact };
 })();
 
+// Helper functions
 const clearMainContent = () => {
 	const contentContainer = document.querySelector("main");
 	contentContainer.classList = "";
 	contentContainer.innerHTML = "";
 };
 
+const removeActive = () => {
+	const home = document.querySelector("#home");
+	const about = document.querySelector("#about");
+	const menu = document.querySelector("#menu");
+	const contact = document.querySelector("#contact");
+
+	[home, about, menu, contact].forEach((nav) => {
+		nav.classList = "";
+	});
+};
+
 const logo = () => {
 	const logo = document.querySelector(".logo");
+	const home = document.querySelector("#home");
 	logo.addEventListener("click", clickHandlers.logo);
+	home.addEventListener("click", clickHandlers.logo);
 };
 
 const about = () => {
