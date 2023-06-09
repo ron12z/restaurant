@@ -1,29 +1,35 @@
 import Landing from "../modules/landing.js";
+import About from "../modules/about.js";
+import Menu from "../modules/menu.js";
+import Contact from "../modules/contact.js";
 
-// ClickHandler Module
+// ClickHandler Module for Tab-Switching
 const clickHandlers = (() => {
 	// Goes landing page
 	const logo = (e) => {
 		clearMainContent();
+		console.log("logo");
 		Landing.loadLanding();
-		loadHandlers();
 	};
 
 	// Goes to about page
 	const about = (e) => {
 		clearMainContent();
+		About.loadAbout();
 		console.log("About");
 	};
 
 	// Goes to menu page
 	const menu = (e) => {
 		clearMainContent();
+		Menu.loadMenu();
 		console.log("Menu");
 	};
 
 	// Goes to contact page
 	const contact = (e) => {
 		clearMainContent();
+		Contact.loadContact();
 		console.log("Contact");
 	};
 
@@ -32,6 +38,7 @@ const clickHandlers = (() => {
 
 const clearMainContent = () => {
 	const contentContainer = document.querySelector("main");
+	contentContainer.classList = "";
 	contentContainer.innerHTML = "";
 };
 
@@ -47,16 +54,18 @@ const about = () => {
 
 const menu = () => {
 	const menu = document.querySelector("#menu");
-	const menuBtn = document.querySelector(".menuBtn");
 	menu.addEventListener("click", clickHandlers.menu);
-	menuBtn.addEventListener("click", clickHandlers.menu);
+
+	const menuBtn = document.querySelector(".menuBtn");
+	if (menuBtn) menuBtn.addEventListener("click", clickHandlers.menu);
 };
 
 const contact = () => {
 	const contact = document.querySelector("#contact");
-	const contactBtn = document.querySelector(".contactBtn");
 	contact.addEventListener("click", clickHandlers.contact);
-	contactBtn.addEventListener("click", clickHandlers.contact);
+
+	const contactBtn = document.querySelector(".contactBtn");
+	if (contactBtn) contactBtn.addEventListener("click", clickHandlers.contact);
 };
 
 const loadHandlers = () => {

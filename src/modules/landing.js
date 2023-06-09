@@ -1,3 +1,5 @@
+import Events from "../modules/events.js";
+
 const loadLanding = () => {
 	const contentContainer = document.querySelector("#content");
 
@@ -20,7 +22,7 @@ const loadLanding = () => {
 					</ul>
 				</nav>
 			</header>
-			<main>
+			<main class="main">
 				<div class="intro-text">
 					<h2>We provide the best food for you</h2>
 					<p>
@@ -45,6 +47,8 @@ const loadLanding = () => {
 			</main>
 			<footer><p>Created by @aarontalua</p></footer>
     `;
+
+	Events.loadHandlers();
 };
 
 export default { loadLanding };
