@@ -39,7 +39,7 @@ const load = () => {
 				<div class="intro-image">
 					<div class="intro-image-container">
 						<img
-							src="../assets/images/pexels-volkan-vardar-3887985 1.png"
+							src="./assets/images/pexels-volkan-vardar-3887985 1.png"
 							alt=""
 							class="main"
 						/>
