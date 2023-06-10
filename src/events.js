@@ -1,7 +1,7 @@
-import Landing from "../modules/landing.js";
-import About from "../modules/about.js";
-import Menu from "../modules/menu.js";
-import Contact from "../modules/contact.js";
+import Landing from "./landing.js";
+import About from "./about.js";
+import Menu from "./menu.js";
+import Contact from "./contact.js";
 
 // ClickHandler Module for Tab-Switching
 const clickHandlers = (() => {

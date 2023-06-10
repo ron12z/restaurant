@@ -1,4 +1,4 @@
-import Events from "../modules/events.js";
+import Events from "./events.js";
 
 const load = () => {
 	const contentContainer = document.querySelector("#content");
@@ -52,4 +52,5 @@ const load = () => {
 	Events.loadHandlers();
 };
 
+// load(); //Initial Landing
 export default { load };
