@@ -231,8 +231,64 @@ main.about {
 }
 
 /* Menu */
-main.menu {
-	background: orange;
+.menu {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.menu-title {
+	font-size: 2.3rem;
+	margin-block: 1rem;
+}
+
+.menu-list {
+	padding: 2rem;
+	padding-top: 0;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(33rem, 1fr));
+	gap: 1rem;
+}
+
+.menu-item {
+	--_color: ;
+	padding: 1rem;
+	border: 2px solid rgba(139, 179, 190, 0.534);
+	background: rgba(20, 21, 22, 0.568);
+	border-radius: 1rem;
+	display: flex;
+	gap: 1.5rem;
+}
+
+.menu-item img {
+	max-width: 10rem;
+	aspect-ratio: 1;
+	border-radius: 1rem;
+	box-shadow: 0 0 5px 2px #636768;
+}
+
+.menu-item .details {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+}
+.menu-item .nameprice {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	& .name {
+		font-size: 1.8rem;
+	}
+
+	& .price {
+		font-size: 1.2rem;
+	}
+}
+
+.menu-item a {
+	color: rgb(85, 249, 255);
 }
 
 /* Contact */
