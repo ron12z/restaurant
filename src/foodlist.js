@@ -77,6 +77,7 @@ const FoodList = [
     "chicken"
   ),
 
+  //   Tinola
   Food(
     "https://panlasangpinoy.com/wp-content/uploads/2018/11/Chicken-Tinola-Soup-Recipe.jpg",
     "Tinola",
