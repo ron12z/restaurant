@@ -1,9 +1,9 @@
 import Events from "./events.js";
 
 const load = () => {
-	const contentContainer = document.querySelector("#content");
+  const contentContainer = document.querySelector("#content");
 
-	contentContainer.innerHTML = `
+  contentContainer.innerHTML = `
     <header>
 				<div class="logo">
 					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -49,8 +49,8 @@ const load = () => {
 			<footer><p>Created by @aarontalua</p></footer>
     `;
 
-	Events.loadHandlers();
+  Events.loadHandlers();
 };
 
-// load(); //Initial Landing
+load(); //Initial Landing
 export default { load };
