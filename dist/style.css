@@ -292,6 +292,7 @@ main.about {
 
 .menu-item a {
   color: rgb(85, 249, 255);
+  width: min-content;
 }
 
 /* Contact */
