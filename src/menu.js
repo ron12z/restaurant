@@ -58,7 +58,7 @@ const load = () => {
 
   const title = document.createElement("h2");
   title.classList.add("menu-title");
-  title.textContent = "Choose Your Bites";
+  title.textContent = "Choose Your Ulam (Served with 1 cup of rice)";
   mainDiv.append(title);
 
   const menuList = document.createElement("div");

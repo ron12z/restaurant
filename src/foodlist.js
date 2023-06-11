@@ -87,6 +87,37 @@ const FoodList = [
     "chicken",
     "plant"
   ),
+
+  //   Sinigang
+  Food(
+    "https://panlasangpinoy.com/wp-content/uploads/2018/11/Sinigang-na-Baboy-Recipe-683x1024.jpg",
+    "Sinigang na Baboy",
+    "Pork soup in sour broth with okra, kangkong, eggplant, and string beans. This dish is best during the cold weather.",
+    "https://panlasangpinoy.com/pork-sinigang-na-baboy-recipe/",
+    "981",
+    "pork"
+  ),
+
+  //   Tilapia
+  Food(
+    "https://panlasangpinoy.com/wp-content/uploads/2010/02/Fried-Fish-Tilapia.jpg",
+    "Fried Tilapia",
+    "It is what it is. Classic, masarap.",
+    "https://panlasangpinoy.com/filipino-food-fried-fish-tilapia-dish/",
+    "100",
+    "fish"
+  ),
+
+  // Hipon
+  Food(
+    "https://panlasangpinoy.com/wp-content/uploads/2009/03/garlic-butter-shrimp-1.jpg",
+    "Garlic Butter Shrimp",
+    "Shrimp cooked in butter and garlic. And Sprite.",
+    "https://panlasangpinoy.com/buttered-garlic-shrimp/",
+    "250",
+    "fish"
+  ),
+  //   List-End
 ];
 
 export default FoodList;
